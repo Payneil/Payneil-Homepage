@@ -88,7 +88,7 @@
       margin-top: 10px;
     }
 
-    /* Bigger, colored, and interactive icons */
+    /* Bigger, colored, and interactive icons for Facebook and Instagram */
     .social-icons a {
       color: white;
       font-size: 30px; /* Bigger icons */
@@ -126,6 +126,19 @@
     .contact-info a:hover {
       text-decoration: underline;
     }
+
+    /* Style for the Phone and Email Icons */
+    .contact-icons a {
+      font-size: 30px; /* Larger icons */
+      margin: 0 15px; /* Space between icons */
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-icons a:hover {
+      color: #ffb31c; /* Color change on hover */
+    }
   </style>
 </head>
 <body>
@@ -147,7 +160,7 @@
   <main>
     <h2>Available Services</h2>
     
-    <!-- Bayad Center Image Inserted Here -->
+    <!-- Bayad Center Image Inserted Here (Reverted back to original size) -->
     <img src="Payneil Services.jpg" alt="Bayad Center Services" class="service-image" />
     <!-- Replace 'path-to-your-image/bayad-center-image.jpg' with the actual image path -->
 
@@ -160,8 +173,15 @@
   <!-- Need Help Section (moved above the footer) -->
   <div class="contact-info">
     <p><strong>Need help? Contact us at:</strong></p>
-    <p>Phone: <a href="tel:+639777509537">0977 750 9537</a></p>
-    <p>Email: <a href="mailto:support@payneil.com">support@payneil.com</a></p>
+    <div class="contact-icons">
+      <!-- Phone Icon and Link -->
+      <a href="tel:+639777509537" class="fas fa-phone-alt"></a>
+      <span class="social-links"><a href="tel:+639777509537">0977 750 9537</a></span>
+
+      <!-- Email Icon and Link -->
+      <a href="mailto:support@payneil.com" class="fas fa-envelope"></a>
+      <span class="social-links"><a href="mailto:support@payneil.com">support@payneil.com</a></span>
+    </div>
     
     <!-- Social Media Links with Icon and Clickable Text -->
     <div class="social-icons">
@@ -172,8 +192,6 @@
       <!-- Instagram -->
       <a href="https://www.instagram.com/nlpatrck" target="_blank" class="fab fa-instagram"></a>
       <span class="social-links"><a href="https://www.instagram.com/nlpatrck" target="_blank">Payneil</a></span>
-
-      <!-- Add more icons if needed -->
     </div>
   </div>
 
