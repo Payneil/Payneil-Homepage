@@ -87,15 +87,15 @@
     .social-icons {
       margin-top: 10px;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-direction: column; /* Stack icons vertically */
+      align-items: flex-start; /* Align to the left */
+      text-align: left; /* Align text to the left */
     }
 
-    /* Bigger, colored, and interactive icons for social media */
     .social-icons a {
       color: white;
       font-size: 30px; /* Bigger icons */
-      margin: 0 15px; /* Space between icons */
+      margin: 10px 0; /* Space between icons */
       text-decoration: none;
     }
 
@@ -116,9 +116,7 @@
     .contact-info {
       text-align: left; /* Align to the left */
       margin-top: 20px;
-      max-width: 400px; /* Limit width */
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: 20px; /* Add some space from the left */
     }
 
     .contact-info a {
@@ -130,7 +128,7 @@
       text-decoration: underline;
     }
 
-    /* Style for the Phone and Email Icons (without hover effect) */
+    /* Style for the Phone and Email Icons */
     .contact-icons a {
       font-size: 30px; /* Larger icons */
       margin: 0 15px; /* Space between icons */
@@ -158,7 +156,7 @@
   <main>
     <h2>Available Services</h2>
     
-    <!-- Bayad Center Image Inserted Here -->
+    <!-- Bayad Center Image Inserted Here (Reverted back to original size) -->
     <img src="Payneil Services.jpg" alt="Bayad Center Services" class="service-image" />
     <!-- Replace 'path-to-your-image/bayad-center-image.jpg' with the actual image path -->
 
@@ -171,16 +169,19 @@
   <!-- Need Help Section (moved above the footer) -->
   <div class="contact-info">
     <p><strong>Need help? Contact us at:</strong></p>
+    
+    <!-- Phone Icon and Link -->
     <div class="contact-icons">
-      <!-- Phone Icon and Link -->
       <a href="tel:+639777509537" class="fas fa-phone-alt"></a>
       <span class="social-links"><a href="tel:+639777509537">0977 750 9537</a></span>
+    </div>
 
-      <!-- Email Icon and Link -->
+    <!-- Email Icon and Link -->
+    <div class="contact-icons">
       <a href="mailto:support@payneil.com" class="fas fa-envelope"></a>
       <span class="social-links"><a href="mailto:support@payneil.com">support@payneil.com</a></span>
     </div>
-    
+
     <!-- Social Media Links with Icon and Clickable Text -->
     <div class="social-icons">
       <!-- Facebook Icon and Link -->
