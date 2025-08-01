@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Payneil - Easy & Secure Bills Payment</title>
+  <!-- Include Font Awesome CDN for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
   <style>
     /* Ensure the body is set up for flexbox layout */
     body {
@@ -23,7 +26,6 @@
       padding: 2em;
     }
 
-    /* Make the Payneil logo circular */
     header img {
       width: 150px;  /* Adjust the size of the logo */
       height: 150px; /* Make the height equal to width to form a circle */
@@ -76,9 +78,25 @@
       background-color: #333;
       color: white;
       text-align: center;
-      padding: 0.5em; /* Slimmed down the padding */
+      padding: 1em; /* Slimmed down the padding */
       width: 100%;
       position: relative; /* Footer stays at the bottom */
+    }
+
+    /* Social Icons Styling */
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 24px;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #ffb31c; /* Change color on hover */
     }
 
     /* Add styles for the image */
@@ -87,13 +105,22 @@
       height: auto;
       margin-top: 20px;
     }
+
+    /* Style for the clickable text beside the icon */
+    .social-links {
+      color: white;
+      font-size: 16px;
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 10px;
+    }
   </style>
 </head>
 <body>
   <!-- Header Section -->
   <header>
     <!-- Payneil Logo -->
-    <img src="Payneil Logo.JPG" alt="Payneil Logo" /> <!-- Ensure the logo is uploaded in the root folder -->
+    <img src="Payneil Logo.JPG" alt="Payneil Logo" />
     <h1>Payneil - Easy & Secure Bills Payment</h1>
     <p>
       Payneil! offers a fast and reliable way to pay your bills. We ensure each transaction is processed accurately, with strict confidentiality and full compliance with data privacy standards. All payments must be made in full before processing and are final once submitted—non-refundable, non-reversible, and non-transferable.<br><br>
@@ -108,7 +135,6 @@
 
   <!-- Main Section with Buttons to Google Sheet -->
   <main>
-    <!-- Make Available Services Heading Bigger and Centered -->
     <h2>Available Services</h2>
     
     <!-- Bayad Center Image Inserted Here -->
@@ -124,6 +150,21 @@
   <!-- Footer Section -->
   <footer>
     <p>&copy; 2025 Payneil. All Rights Reserved.</p>
+
+    <!-- Social Media Links with Icon and Clickable Text -->
+    <div class="social-icons">
+      <!-- Facebook Icon and Link -->
+      <a href="https://www.facebook.com/nlpatrck" target="_blank" class="fab fa-facebook-f"></a>
+      <span class="social-links"><a href="https://www.facebook.com/nlpatrck" target="_blank">Facebook</a></span>
+      
+      <!-- You can add more social icons below -->
+      <!-- Example for Instagram -->
+      <a href="https://www.instagram.com/nlpatrck" target="_blank" class="fab fa-instagram"></a>
+      <span class="social-links"><a href="https://www.instagram.com/nlpatrck" target="_blank">Instagram</a></span>
+    </div>
   </footer>
+
+  <!-- Include Font Awesome Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </body>
 </html>
