@@ -86,21 +86,17 @@
     /* Social Icons Styling */
     .social-icons {
       margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    /* Bigger, colored, and interactive icons for Facebook and Instagram */
+    /* Bigger icons for social media */
     .social-icons a {
       color: white;
       font-size: 30px; /* Bigger icons */
       margin: 0 15px; /* Space between icons */
       text-decoration: none;
-      transition: transform 0.3s ease, color 0.3s ease; /* Add transition for hover effect */
-    }
-
-    /* Hover effect for the icons */
-    .social-icons a:hover {
-      transform: scale(1.2); /* Slightly bigger on hover */
-      color: #ffb31c; /* Color change on hover */
     }
 
     /* Style for the clickable text beside the icon */
@@ -127,17 +123,20 @@
       text-decoration: underline;
     }
 
-    /* Style for the Phone and Email Icons */
+    /* Phone and Email Icons (no hover effect) */
     .contact-icons a {
       font-size: 30px; /* Larger icons */
       margin: 0 15px; /* Space between icons */
       color: white;
       text-decoration: none;
-      transition: color 0.3s ease;
     }
 
-    .contact-icons a:hover {
-      color: #ffb31c; /* Color change on hover */
+    /* Align Phone and Email with Social Media Icons */
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
     }
   </style>
 </head>
