@@ -86,24 +86,21 @@
     /* Social Icons Styling */
     .social-icons {
       margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
+    /* Bigger, colored, and interactive icons for social media */
     .social-icons a {
       color: white;
-      font-size: 24px;
-      margin: 0 10px;
+      font-size: 30px; /* Bigger icons */
+      margin: 0 15px; /* Space between icons */
       text-decoration: none;
     }
 
     .social-icons a:hover {
       color: #ffb31c; /* Change color on hover */
-    }
-
-    /* Add styles for the image */
-    .service-image {
-      width: 100%;
-      height: auto;
-      margin-top: 20px;
     }
 
     /* Style for the clickable text beside the icon */
@@ -117,8 +114,11 @@
 
     /* Contact info section style */
     .contact-info {
-      text-align: center;
+      text-align: left; /* Align to the left */
       margin-top: 20px;
+      max-width: 400px; /* Limit width */
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .contact-info a {
@@ -128,6 +128,14 @@
 
     .contact-info a:hover {
       text-decoration: underline;
+    }
+
+    /* Style for the Phone and Email Icons (without hover effect) */
+    .contact-icons a {
+      font-size: 30px; /* Larger icons */
+      margin: 0 15px; /* Space between icons */
+      color: #ffb31c; /* Icon color */
+      text-decoration: none;
     }
   </style>
 </head>
@@ -163,18 +171,25 @@
   <!-- Need Help Section (moved above the footer) -->
   <div class="contact-info">
     <p><strong>Need help? Contact us at:</strong></p>
-    <p>Phone: <a href="tel:+639777509537">0977 750 9537</a></p>
-    <p>Email: <a href="mailto:support@payneil.com">support@payneil.com</a></p>
+    <div class="contact-icons">
+      <!-- Phone Icon and Link -->
+      <a href="tel:+639777509537" class="fas fa-phone-alt"></a>
+      <span class="social-links"><a href="tel:+639777509537">0977 750 9537</a></span>
+
+      <!-- Email Icon and Link -->
+      <a href="mailto:support@payneil.com" class="fas fa-envelope"></a>
+      <span class="social-links"><a href="mailto:support@payneil.com">support@payneil.com</a></span>
+    </div>
     
     <!-- Social Media Links with Icon and Clickable Text -->
     <div class="social-icons">
       <!-- Facebook Icon and Link -->
       <a href="https://www.facebook.com/nlpatrck" target="_blank" class="fab fa-facebook-f"></a>
-      <span class="social-links"><a href="https://www.facebook.com/nlpatrck" target="_blank">Facebook</a></span>
+      <span class="social-links"><a href="https://www.facebook.com/nlpatrck" target="_blank">Payneil</a></span>
       
       <!-- Instagram -->
       <a href="https://www.instagram.com/nlpatrck" target="_blank" class="fab fa-instagram"></a>
-      <span class="social-links"><a href="https://www.instagram.com/nlpatrck" target="_blank">Instagram</a></span>
+      <span class="social-links"><a href="https://www.instagram.com/nlpatrck" target="_blank">Payneil</a></span>
     </div>
   </div>
 
