@@ -114,6 +114,21 @@
       vertical-align: top;
       margin-left: 10px;
     }
+
+    /* Contact info section style */
+    .contact-info {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .contact-info a {
+      color: #ffb31c;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -127,9 +142,7 @@
 
       Submitted information is retained for up to 1 year for audit purposes and securely deleted or anonymized afterward.<br><br>
 
-      Pay smart, pay safely—with Payneil!<br><br>
-
-      Need help? Contact us at 0977 750 9537.
+      Pay smart, pay safely—with Payneil!
     </p>
   </header>
 
@@ -147,21 +160,27 @@
     <a href="https://forms.gle/iNXUrkZykYkkqzkY6" class="btn" target="_blank">Hotel Accommodation</a>
   </main>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2025 Payneil. All Rights Reserved.</p>
-
+  <!-- Need Help Section (moved above the footer) -->
+  <div class="contact-info">
+    <p><strong>Need help? Contact us at:</strong></p>
+    <p>Phone: <a href="tel:+639777509537">0977 750 9537</a></p>
+    <p>Email: <a href="mailto:support@payneil.com">support@payneil.com</a></p>
+    
     <!-- Social Media Links with Icon and Clickable Text -->
     <div class="social-icons">
       <!-- Facebook Icon and Link -->
       <a href="https://www.facebook.com/nlpatrck" target="_blank" class="fab fa-facebook-f"></a>
-      <span class="social-links"><a href="https://www.facebook.com/nlpatrck" target="_blank">Payneil</a></span>
+      <span class="social-links"><a href="https://www.facebook.com/nlpatrck" target="_blank">Facebook</a></span>
       
-      <!-- You can add more social icons below -->
-      <!-- Example for Instagram -->
+      <!-- Instagram -->
       <a href="https://www.instagram.com/nlpatrck" target="_blank" class="fab fa-instagram"></a>
-      <span class="social-links"><a href="https://www.instagram.com/nlpatrck" target="_blank">Payneil</a></span>
+      <span class="social-links"><a href="https://www.instagram.com/nlpatrck" target="_blank">Instagram</a></span>
     </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Payneil. All Rights Reserved.</p>
   </footer>
 
   <!-- Include Font Awesome Script -->
