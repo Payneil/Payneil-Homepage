@@ -10,7 +10,8 @@
       background-color: #f5f5f5;
       margin: 0;
       padding: 0;
-      padding-bottom: 60px; /* Adds space for the footer */
+      min-height: 100vh; /* Ensures body takes full viewport height */
+      padding-bottom: 60px; /* Gives space for the footer */
     }
     header {
       background-color: #ffb31c;
@@ -31,6 +32,7 @@
     }
     main {
       padding: 20px;
+      padding-bottom: 60px; /* Make sure there's enough space for the footer */
     }
     .btn {
       display: block;
@@ -52,7 +54,7 @@
       color: white;
       text-align: center;
       padding: 0.5em; /* Slimmed down the padding */
-      position: fixed;
+      position: absolute; /* Footer stays at the bottom */
       width: 100%;
       bottom: 0;
     }
@@ -84,15 +86,16 @@
   <!-- Main Section with Buttons to Google Sheet -->
   <main>
     <h2>Available Services</h2>
+    
+    <!-- Bayad Center Image Inserted Here -->
+    <img src="Payneil Services.jpg" alt="Bayad Center Services" class="service-image" />
+    <!-- Replace 'path-to-your-image/bayad-center-image.jpg' with the actual image path -->
+
     <a href="https://forms.gle/m6X19rGQjQiTjnKLA=" class="btn" target="_blank">View Services List</a>
     <a href="https://forms.gle/FpNnXT27X4dvFjRv9=" class="btn" target="_blank">Bills Payment</a>
     <a href="https://forms.gle/m6X19rGQjQiTjnKLA" class="btn" target="_blank">E-Load</a>
     <a href="https://forms.gle/8gdEWCDEPo92aE82A" class="btn" target="_blank">Airline Booking</a>
     <a href="https://forms.gle/iNXUrkZykYkkqzkY6" class="btn" target="_blank">Hotel Accommodation</a>
-
-    <!-- Full Service Image (Bayad Center) -->
-    <img src="Payneil Services.jpg" alt="Bayad Center Services" class="service-image" />
-    <!-- Replace 'path-to-your-image/bayad-center-image.jpg' with the actual image path -->
   </main>
 
   <!-- Footer Section -->
