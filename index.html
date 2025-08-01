@@ -48,12 +48,11 @@
       padding-bottom: 60px; /* Make sure there's enough space for the footer */
     }
 
-    /* Make the "Available Services" heading bigger and centered */
     h2 {
-      font-size: 2.5em; /* Increase font size */
-      text-align: center; /* Center the heading */
-      margin-bottom: 20px; /* Space below the heading */
-      color: #333; /* Optional: change color */
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
     }
 
     .btn {
@@ -73,68 +72,39 @@
       background-color: #f8a400;
     }
 
-    /* Footer Styles */
     footer {
       background-color: #333;
       color: white;
       text-align: center;
-      padding: 1em; /* Slimmed down the padding */
+      padding: 1em;
       width: 100%;
-      position: relative; /* Footer stays at the bottom */
+      position: relative;
     }
 
-    /* Social Icons Styling */
-    .social-icons {
-      margin-top: 10px;
+    /* Updated Contact Us Section */
+    .contact-section {
+      background-color: #f9f9f9;
+      padding: 40px 0;
       text-align: center;
     }
 
-    .social-icons a {
-      color: white;
-      font-size: 24px;
-      margin: 0 10px;
-      text-decoration: none;
+    .contact-section h2 {
+      font-family: 'Georgia', serif;
+      font-size: 2.5em;
+      margin-bottom: 1em;
+      color: #333;
+      font-weight: normal;
     }
 
-    .social-icons a:hover {
-      color: #ffb31c; /* Change color on hover */
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    /* Add styles for the image */
-    .service-image {
-      width: 100%;
-      height: auto;
-      margin-top: 20px;
-    }
-
-    /* Style for the clickable text beside the icon */
-    .social-links {
-      color: white;
-      font-size: 16px;
-      display: inline-block;
-      vertical-align: top;
-      margin-left: 10px;
-    }
-
-    /* Contact info section style */
-    .contact-info {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .contact-info a {
-      color: #ffb31c;
-      text-decoration: none;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-
-    /* Style for contact icons and text */
     .contact-item {
       font-size: 18px;
-      margin: 10px 0;
+      margin: 20px 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -145,66 +115,88 @@
       font-size: 20px;
     }
 
-    .social-icons a,
     .contact-item a {
+      color: #333;
       font-size: 18px;
+      text-decoration: none;
+      font-weight: normal;
+    }
+
+    .contact-item a:hover {
+      color: #ffb31c;
+    }
+
+    /* Logo */
+    .logo-container {
+      margin-bottom: 20px;
+    }
+
+    .logo-container img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    /* Social Icons Styling */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      color: #333;
+      font-size: 24px;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #ffb31c;
     }
 
   </style>
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <!-- Payneil Logo -->
-    <img src="Payneil Logo.JPG" alt="Payneil Logo" />
-    <h1>Payneil - Easy & Secure Bills Payment</h1>
-    <p>
-      Payneil! offers a fast and reliable way to pay your bills. We ensure each transaction is processed accurately, with strict confidentiality and full compliance with data privacy standards. All payments must be made in full before processing and are final once submitted—non-refundable, non-reversible, and non-transferable.<br><br>
 
-      Submitted information is retained for up to 1 year for audit purposes and securely deleted or anonymized afterward.<br><br>
-
-      Pay smart, pay safely—with Payneil!
-    </p>
-  </header>
-
-  <!-- Main Section with Buttons to Google Sheet -->
+  <!-- Main Content Section -->
   <main>
-    <h2>Available Services</h2>
-    
-    <!-- Bayad Center Image Inserted Here -->
-    <img src="Payneil Services.jpg" alt="Bayad Center Services" class="service-image" />
-    <!-- Replace 'path-to-your-image/bayad-center-image.jpg' with the actual image path -->
-
-    <a href="https://forms.gle/FpNnXT27X4dvFjRv9" class="btn" target="_blank">Bills Payment</a>
-    <a href="https://forms.gle/m6X19rGQjQiTjnKLA" class="btn" target="_blank">E-Load</a>
-    <a href="https://forms.gle/8gdEWCDEPo92aE82A" class="btn" target="_blank">Airline Booking</a>
-    <a href="https://forms.gle/iNXUrkZykYkkqzkY6" class="btn" target="_blank">Hotel Accommodation</a>
+    <!-- Your other content here -->
   </main>
 
-  <!-- Need Help Section (moved above the footer) -->
-  <div class="contact-info">
-    <p><strong>Need help? Contact us at:</strong></p>
-    
-    <!-- Contact Info: Phone & Email with Icons -->
-    <div class="contact-item">
-      <i class="fas fa-phone-alt"></i>
-      <a href="tel:+639777509537">0977 750 9537</a>
-    </div>
-    <div class="contact-item">
-      <i class="fas fa-envelope"></i>
-      <a href="mailto:support@payneil.com">support@payneil.com</a>
+  <!-- Contact Section -->
+  <div class="contact-section">
+    <div class="logo-container">
+      <img src="Payneil Logo.JPG" alt="Payneil Logo" />
     </div>
 
-    <!-- Social Media Links with Icon and Clickable Text -->
+    <h2>Contact Us</h2>
+
+    <div class="contact-details">
+      <!-- Address -->
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>123 Anywhere St., Any City, ST 12345</span>
+      </div>
+
+      <!-- Phone -->
+      <div class="contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <a href="tel:+639777509537">+6397 7750 9537</a>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:support@payneil.com">support@payneil.com</a>
+      </div>
+    </div>
+
     <div class="social-icons">
       <!-- Facebook Icon and Link -->
       <a href="https://www.facebook.com/nlpatrck" target="_blank" class="fab fa-facebook-f"></a>
-      <span class="social-links"><a href="https://www.facebook.com/nlpatrck" target="_blank">Facebook</a></span>
-      
-      <!-- Instagram -->
-      <br> <!-- Line break to place Instagram below Facebook -->
+      <!-- Instagram Icon and Link -->
       <a href="https://www.instagram.com/nlpatrck" target="_blank" class="fab fa-instagram"></a>
-      <span class="social-links"><a href="https://www.instagram.com/nlpatrck" target="_blank">Instagram</a></span>
     </div>
   </div>
 
