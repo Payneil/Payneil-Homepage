@@ -83,11 +83,43 @@
       position: relative; /* Footer stays at the bottom */
     }
 
+    /* Social Icons Styling */
+    .social-icons {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 24px;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #ffb31c; /* Change color on hover */
+    }
+
+    /* Add styles for the image */
+    .service-image {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    /* Style for the clickable text beside the icon */
+    .social-links {
+      color: white;
+      font-size: 16px;
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 10px;
+    }
+
     /* Contact info section style */
     .contact-info {
-      text-align: left; /* Align to the left */
+      text-align: center;
       margin-top: 20px;
-      margin-left: 20px; /* Add some space from the left */
     }
 
     .contact-info a {
@@ -99,35 +131,25 @@
       text-decoration: underline;
     }
 
-    /* Social Icons Styling */
-    .social-icons {
-      margin-top: 10px;
+    /* Style for contact icons and text */
+    .contact-item {
+      font-size: 18px;
+      margin: 10px 0;
       display: flex;
-      flex-direction: column; /* Stack icons vertically */
-      align-items: flex-start; /* Align to the left */
-      text-align: left; /* Align text to the left */
+      align-items: center;
+      justify-content: center;
     }
 
-    .social-icons a {
-      color: #ffb31c; /* Icon color */
-      font-size: 30px; /* Bigger icons */
-      margin: 10px 0; /* Space between icons */
-      text-decoration: none;
+    .contact-item i {
+      margin-right: 10px;
+      font-size: 20px;
     }
 
-    .social-icons a:hover {
-      color: #f8a400; /* Change color on hover */
+    .social-icons a,
+    .contact-item a {
+      font-size: 18px;
     }
 
-    /* Add styles for the image */
-    .service-image {
-      width: 100%;
-      height: auto;
-      max-width: 600px; /* Reverted back to original size */
-      margin-top: 20px;
-      margin-left: auto;
-      margin-right: auto;
-    }
   </style>
 </head>
 <body>
@@ -149,8 +171,9 @@
   <main>
     <h2>Available Services</h2>
     
-    <!-- Payneil Services Image Reverted to Original Size -->
+    <!-- Bayad Center Image Inserted Here -->
     <img src="Payneil Services.jpg" alt="Bayad Center Services" class="service-image" />
+    <!-- Replace 'path-to-your-image/bayad-center-image.jpg' with the actual image path -->
 
     <a href="https://forms.gle/FpNnXT27X4dvFjRv9" class="btn" target="_blank">Bills Payment</a>
     <a href="https://forms.gle/m6X19rGQjQiTjnKLA" class="btn" target="_blank">E-Load</a>
@@ -162,27 +185,26 @@
   <div class="contact-info">
     <p><strong>Need help? Contact us at:</strong></p>
     
-    <!-- Phone Icon and Link -->
-    <div class="contact-icons">
-      <a href="tel:+639777509537" class="fas fa-phone-alt"></a>
-      <span><a href="tel:+639777509537">0977 750 9537</a></span>
+    <!-- Contact Info: Phone & Email with Icons -->
+    <div class="contact-item">
+      <i class="fas fa-phone-alt"></i>
+      <a href="tel:+639777509537">0977 750 9537</a>
     </div>
-
-    <!-- Email Icon and Link -->
-    <div class="contact-icons">
-      <a href="mailto:support@payneil.com" class="fas fa-envelope"></a>
-      <span><a href="mailto:support@payneil.com">support@payneil.com</a></span>
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:support@payneil.com">support@payneil.com</a>
     </div>
 
     <!-- Social Media Links with Icon and Clickable Text -->
     <div class="social-icons">
       <!-- Facebook Icon and Link -->
       <a href="https://www.facebook.com/nlpatrck" target="_blank" class="fab fa-facebook-f"></a>
-      <span><a href="https://www.facebook.com/nlpatrck" target="_blank">Payneil</a></span>
+      <span class="social-links"><a href="https://www.facebook.com/nlpatrck" target="_blank">Facebook</a></span>
       
       <!-- Instagram -->
+      <br> <!-- Line break to place Instagram below Facebook -->
       <a href="https://www.instagram.com/nlpatrck" target="_blank" class="fab fa-instagram"></a>
-      <span><a href="https://www.instagram.com/nlpatrck" target="_blank">Payneil</a></span>
+      <span class="social-links"><a href="https://www.instagram.com/nlpatrck" target="_blank">Instagram</a></span>
     </div>
   </div>
 
