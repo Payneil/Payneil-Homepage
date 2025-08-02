@@ -30,37 +30,40 @@
     nav {
       background-color: #333;
       padding: 0.8em 1em;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    nav .logo {
-      color: #ffb31c;
-      font-weight: bold;
-      font-size: 1.4em;
-      text-decoration: none;
+      text-align: center;
     }
 
     nav a {
       color: white;
-      margin: 0 0.8em;
+      margin: 0 1em;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
+      font-size: 1em;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
       color: #ffb31c;
     }
 
-    /* Header Section */
     header {
       background-color: #ffb31c;
       color: white;
       text-align: center;
-      padding: 4em 1em 3em;
+      padding: 3em 1em 2em;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+      width: 150px;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     header h1 {
@@ -93,23 +96,6 @@
     }
 
     /* Button */
-    .hero-cta {
-      background: white;
-      color: #ffb31c;
-      padding: 0.8em 1.5em;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      font-size: 1em;
-      transition: 0.3s;
-    }
-
-    .hero-cta:hover {
-      background: #f6a600;
-      color: white;
-    }
-
     .btn {
       display: block;
       background-color: #fff;
@@ -141,7 +127,7 @@
       color: white;
     }
 
-    /* Main Section */
+    /* Main Content */
     main {
       flex: 1;
       max-width: 900px;
@@ -157,45 +143,18 @@
       padding-bottom: 10px;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2em;
-    }
-
-    .card {
-      background: white;
-      padding: 2em;
+    .service-image {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 20px auto 30px;
+      display: block;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-      text-align: center;
-      transition: 0.3s;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      border: 3px solid #ffb31c;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card i {
-      font-size: 2em;
-      color: #ffb31c;
-      margin-bottom: 0.5em;
-    }
-
-    .card h3 {
-      font-size: 1.3em;
-      margin-bottom: 0.5em;
-    }
-
-    .card a {
-      display: inline-block;
-      margin-top: 1em;
-      text-decoration: none;
-      color: #ffb31c;
-      font-weight: bold;
-    }
-
-    /* Contact Section */
+    /* Contact Info */
     .contact-info {
       text-align: center;
       margin-top: 40px;
@@ -206,23 +165,28 @@
       font-size: 1.1em;
     }
 
-    .contact-item i {
+    .contact-item,
+    .social-item .social-links {
+      font-size: 18px;
+      color: #ffb31c;
+      font-weight: 600;
+    }
+
+    .contact-item i,
+    .social-icons a.fab {
       font-size: 20px;
       color: #ffb31c;
+      background-color: transparent !important;
+      padding: 0;
+      border-radius: 0;
+      width: auto;
+      height: auto;
+      display: inline-block;
     }
 
-    .contact-item a {
-      color: #ffb31c;
-      text-decoration: none;
-    }
-
-    .contact-item a:hover {
-      text-decoration: underline;
-    }
-
-    /* Social Media */
-    .social-icons {
-      margin-top: 20px;
+    .contact-item i:hover,
+    .social-icons a.fab:hover {
+      text-shadow: 0 0 5px #ffb31c;
     }
 
     .social-item {
@@ -233,15 +197,32 @@
       margin: 10px 0;
     }
 
-    .social-links {
-      font-size: 18px;
-      color: #ffb31c;
-      font-weight: 600;
+    .social-icons a.fab:hover {
+      background-color: transparent;
+      color: #e69900;
     }
 
-    .social-icons a.fab {
-      font-size: 20px;
+    .social-links:hover {
+      color: #e69900;
+      text-decoration: underline;
+    }
+
+    .contact-item {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: nowrap;
+    }
+
+    .contact-item a {
       color: #ffb31c;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
     }
 
     /* Footer */
@@ -273,6 +254,16 @@
         padding: 0.9em;
       }
 
+      .contact-item, .social-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .social-links {
+        font-size: 14px;
+      }
+
       nav a {
         display: block;
         margin: 0.5em 0;
@@ -284,16 +275,15 @@
 
   <!-- Navigation Bar -->
   <nav>
-    <a href="#top" class="logo">Payneil</a>
-    <div>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
-    </div>
+    <a href="#top">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
   </nav>
 
   <!-- Header Section -->
   <header id="top">
+    <img src="Payneil Logo.JPG" alt="Payneil Logo" />
     <h1>Payneil - Easy & Secure Bills Payment</h1>
     <p>
       Payneil offers a fast and reliable way to pay your bills. We ensure each transaction is processed accurately, with strict confidentiality and full compliance with data privacy standards.<br><br>
@@ -308,55 +298,41 @@
       Enjoy <strong>ZERO transaction fees</strong> on all your bill payments—no hidden charges, no surprises. <br><br>
       <em>Pay smart. Pay exact. Only with Payneil.</em>
     </div>
-
-    <a href="#services"><button class="hero-cta">Explore Services</button></a>
   </header>
 
   <!-- Main Section -->
   <main id="services">
     <h2>Available Services</h2>
+    <img src="Payneil Services.jpg" alt="Bayad Center Services" class="service-image" />
 
-    <div class="grid">
-      <div class="card">
-        <i class="fas fa-water"></i>
-        <h3>Water Bill Payment</h3>
-        <p>Pay your water bills easily and on time, no more long queues!</p>
-        <a href="#">Pay Now</a>
-      </div>
-      <div class="card">
-        <i class="fas fa-bolt"></i>
-        <h3>Electricity Bill Payment</h3>
-        <p>Stay on top of your energy costs with quick and secure payments.</p>
-        <a href="#">Pay Now</a>
-      </div>
-      <div class="card">
-        <i class="fas fa-mobile-alt"></i>
-        <h3>Mobile Bill Payment</h3>
-        <p>Never miss a payment for your mobile services again.</p>
-        <a href="#">Pay Now</a>
-      </div>
-    </div>
+    <a href="https://forms.gle/FpNnXT27X4dvFjRv9" class="btn" target="_blank"><i class="fas fa-receipt"></i> Bills Payment</a>
+    <a href="https://forms.gle/m6X19rGQjQiTjnKLA" class="btn" target="_blank"><i class="fas fa-mobile-alt"></i> E-Load</a>
+    <a href="https://forms.gle/8gdEWCDEPo92aE82A" class="btn" target="_blank"><i class="fas fa-plane"></i> Airline Booking</a>
+    <a href="https://forms.gle/iNXUrkZykYkkqzkY6" class="btn" target="_blank"><i class="fas fa-hotel"></i> Hotel Accommodation</a>
 
     <!-- Contact Section -->
     <div class="contact-info" id="contact">
-      <h3>Contact Us</h3>
-      <p>We’re here to assist you with any questions or concerns!</p>
+      <p>Need help? Contact us at:</p>
+
       <div class="contact-item">
-        <i class="fas fa-phone"></i>
-        <p>+123-456-7890</p>
+        <i class="fas fa-phone-alt"></i>
+        <a href="tel:+639777509537">0977 750 9537</a>
       </div>
       <div class="contact-item">
         <i class="fas fa-envelope"></i>
         <a href="mailto:support@payneil.com">support@payneil.com</a>
       </div>
-    </div>
 
-    <!-- Social Media Links -->
-    <div class="social-icons">
-      <div class="social-item">
-        <a href="https://facebook.com" class="fab fa-facebook-f"></a>
-        <a href="https://twitter.com" class="fab fa-twitter"></a>
-        <a href="https://linkedin.com" class="fab fa-linkedin-in"></a>
+      <!-- Social Media -->
+      <div class="social-icons">
+        <div class="social-item">
+          <a href="https://www.facebook.com/PayneilOfficial" target="_blank" class="fab fa-facebook-f" aria-label="Facebook"></a>
+          <a href="https://www.facebook.com/PayneilOfficial" target="_blank" class="social-links">Facebook.com/PayneilOfficial</a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.instagram.com/PayneilOfficial" target="_blank" class="fab fa-instagram" aria-label="Instagram"></a>
+          <a href="https://www.instagram.com/PayneilOfficial" target="_blank" class="social-links">Instagram.com/PayneilOfficial</a>
+        </div>
       </div>
     </div>
   </main>
@@ -364,7 +340,11 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Payneil. All Rights Reserved.</p>
-    <p><a href="#top">Back to top</a></p>
+    <p>
+      By submitting, you agree to our
+      <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
+    </p>
   </footer>
+
 </body>
 </html>
