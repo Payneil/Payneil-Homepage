@@ -148,26 +148,27 @@
       gap: 10px;
     }
 
+    /* Updated: Icons colored Payneil yellow with transparent background */
     .social-icons a.fab {
-      font-size: 22px;
-      color: white;
-      background-color: #333;
-      border-radius: 50%;
-      padding: 10px;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
+      font-size: 26px;
+      color: #ffb31c;  /* Payneil yellow */
+      background-color: transparent;
+      padding: 0;
+      border-radius: 0;
+      transition: color 0.3s ease;
       text-decoration: none;
     }
 
     .social-icons a.fab:hover {
-      background-color: #ffb31c;
+      color: #cc8c00; /* Slightly darker yellow on hover */
     }
 
     .social-links {
       font-size: 16px;
-      color: #333;
+      color: #ffb31c;
       text-decoration: none;
+      white-space: nowrap;
+      transition: text-decoration 0.3s ease;
     }
 
     .social-links:hover {
@@ -270,3 +271,10 @@
       By submitting, you agree to our
       <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
     </p>
+  </footer>
+
+  <!-- Font Awesome JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+</body>
+</html>
