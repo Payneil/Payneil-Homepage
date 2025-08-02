@@ -101,12 +101,13 @@
       background-color: #fff;
       color: #333;
       padding: 1em;
-      margin: 1em;
+      margin: 1em auto;
       border-radius: 5px;
       text-align: center;
       text-decoration: none;
       font-size: 18px;
       font-weight: 600;
+      max-width: 400px;
       transition: all 0.3s ease;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       border: 2px solid #ffb31c;
@@ -151,15 +152,6 @@
       border-radius: 10px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.15);
       border: 3px solid #ffb31c;
-    }
-
-    /* Service Grid */
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Creates a 2x2 grid */
-      gap: 20px;
-      justify-items: center;
-      margin-top: 30px;
     }
 
     /* Contact Info */
@@ -276,10 +268,6 @@
         display: block;
         margin: 0.5em 0;
       }
-
-      .service-grid {
-        grid-template-columns: 1fr; /* Stacks the grid items vertically on mobile */
-      }
     }
   </style>
 </head>
@@ -313,16 +301,33 @@
   </header>
 
   <!-- Main Section -->
-  <main id="services">
-    <h2>Available Services</h2>
-    <img src="Payneil Services.jpg" alt="Bayad Center Services" class="service-image" />
-
-    <!-- Service Buttons in 2x2 Grid -->
-    <div class="service-grid">
-      <a href="https://forms.gle/FpNnXT27X4dvFjRv9" class="btn" target="_blank"><i class="fas fa-receipt"></i> Bills Payment</a>
-      <a href="https://forms.gle/m6X19rGQjQiTjnKLA" class="btn" target="_blank"><i class="fas fa-mobile-alt"></i> E-Load</a>
-      <a href="https://forms.gle/8gdEWCDEPo92aE82A" class="btn" target="_blank"><i class="fas fa-plane"></i> Airline Booking</a>
-      <a href="https://forms.gle/iNXUrkZykYkkqzkY6" class="btn" target="_blank"><i class="fas fa-hotel"></i> Hotel Accommodation</a>
+  <main>
+    <h2 class="section-title" id="services">Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <i class="fas fa-receipt"></i>
+        <h3>Bills Payment</h3>
+        <p>Pay utilities, internet, and more—fast and secure.</p>
+        <a href="https://forms.gle/FpNnXT27X4dvFjRv9" target="_blank">Start Payment</a>
+      </div>
+      <div class="card">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>E-Load</h3>
+        <p>Instant load for all major networks, anytime.</p>
+        <a href="https://forms.gle/m6X19rGQjQiTjnKLA" target="_blank">Get Load</a>
+      </div>
+      <div class="card">
+        <i class="fas fa-plane"></i>
+        <h3>Airline Booking</h3>
+        <p>Book local and international flights with ease.</p>
+        <a href="https://forms.gle/8gdEWCDEPo92aE82A" target="_blank">Book Now</a>
+      </div>
+      <div class="card">
+        <i class="fas fa-hotel"></i>
+        <h3>Hotel Accommodation</h3>
+        <p>Find and book comfortable stays at great rates.</p>
+        <a href="https://forms.gle/iNXUrkZykYkkqzkY6" target="_blank">Reserve</a>
+      </div>
     </div>
 
     <!-- Contact Section -->
