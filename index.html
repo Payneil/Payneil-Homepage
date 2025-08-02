@@ -110,19 +110,55 @@
       font-size: 1.1em;
     }
 
+    /* Unified font size and color for contact and social links */
+    .contact-item, 
+    .social-item .social-links {
+      font-size: 18px;       /* Same font size */
+      color: #ffb31c;        /* Same color as icons */
+      font-weight: 600;
+    }
+
+    /* Unified icon size and color */
+    .contact-item i,
+    .social-icons a.fab {
+      font-size: 20px;       /* Same icon size */
+      color: #ffb31c;        /* Same icon color */
+      background-color: transparent !important; /* Remove background from social icons */
+      padding: 0;            /* Remove padding from social icons */
+      border-radius: 0;      /* Remove round shape */
+      width: auto;
+      height: auto;
+      display: inline-block;
+    }
+
+    /* Align social icon and text */
+    .social-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+      margin: 10px 0;
+    }
+
+    /* Remove previous background hover effect on social icons */
+    .social-icons a.fab:hover {
+      background-color: transparent;
+      color: #e69900;
+    }
+
+    /* Social text link hover */
+    .social-links:hover {
+      color: #e69900;
+      text-decoration: underline;
+    }
+
     .contact-item {
-      font-size: 18px;
       margin: 10px 0;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .contact-item i {
-      font-size: 20px;
-      color: #ffb31c;
+      flex-wrap: nowrap;
     }
 
     .contact-item a {
@@ -131,46 +167,6 @@
     }
 
     .contact-item a:hover {
-      text-decoration: underline;
-    }
-
-    .social-icons {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .social-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .social-icons a.fab {
-      font-size: 22px;
-      color: white;
-      background-color: #333;
-      border-radius: 50%;
-      padding: 10px;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .social-icons a.fab:hover {
-      background-color: #ffb31c;
-    }
-
-    .social-links {
-      font-size: 16px;
-      color: #333;
-      text-decoration: none;
-    }
-
-    .social-links:hover {
       text-decoration: underline;
     }
 
@@ -270,3 +266,7 @@
       By submitting, you agree to our
       <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
     </p>
+  </footer>
+
+</body>
+</html>
