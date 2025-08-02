@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Payneil - Easy & Secure Bills Payment</title>
+
   <!-- Font Awesome for icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
 
@@ -13,14 +14,14 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
       background-color: #f5f5f5;
       margin: 0;
       padding: 0;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      overflow-x: hidden;
+      color: #333;
     }
 
     header {
@@ -42,26 +43,30 @@
       margin-right: auto;
     }
 
+    header h1 {
+      font-size: 2.2em;
+      margin-bottom: 0.5em;
+    }
+
     header p {
       font-size: 1.1em;
-      line-height: 1.6;
       max-width: 800px;
       margin: 0 auto;
-      padding-top: 1em;
-      padding-left: 1em;
-      padding-right: 1em;
+      padding: 1em;
+      line-height: 1.6;
     }
 
     main {
       flex: 1;
-      padding: 20px 1em 60px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2em 1em 4em;
     }
 
     h2 {
-      font-size: 2.5em;
+      font-size: 2em;
       text-align: center;
       margin-bottom: 20px;
-      color: #333;
     }
 
     .btn {
@@ -69,88 +74,40 @@
       background-color: #ffb31c;
       color: white;
       padding: 1em;
-      text-align: center;
       margin: 1em auto;
       border-radius: 5px;
+      text-align: center;
       text-decoration: none;
       font-size: 18px;
+      font-weight: 600;
       max-width: 400px;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
     .btn:hover {
       background-color: #f8a400;
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 1em 1em;
-      width: 100%;
-      position: relative;
-    }
-
-    .social-icons {
-      margin-top: 10px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .social-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .social-icons a.fab {
-      font-size: 24px;
-      color: white;
-      text-decoration: none;
-      flex-shrink: 0;
-    }
-
-    .social-icons a.fab:hover {
-      color: #ffb31c;
-    }
-
-    .social-links {
-      color: white;
-      font-size: 16px;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .social-links:hover {
-      text-decoration: underline;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
     .service-image {
       width: 100%;
       max-width: 600px;
       height: auto;
-      margin: 20px auto 0;
+      margin: 20px auto 30px;
       display: block;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
 
     .contact-info {
       text-align: center;
-      margin-top: 20px;
-      padding-left: 1em;
-      padding-right: 1em;
+      margin-top: 40px;
     }
 
-    .contact-info a {
-      color: #ffb31c;
-      text-decoration: none;
-      word-break: break-word;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
+    .contact-info p {
+      font-weight: bold;
+      font-size: 1.1em;
     }
 
     .contact-item {
@@ -159,83 +116,157 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 10px;
       flex-wrap: wrap;
-      gap: 8px;
     }
 
     .contact-item i {
       font-size: 20px;
-      flex-shrink: 0;
+      color: #ffb31c;
     }
 
-    .social-icons a,
     .contact-item a {
-      font-size: 18px;
+      color: #ffb31c;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .social-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-icons a.fab {
+      font-size: 22px;
+      color: white;
+      background-color: #333;
+      border-radius: 50%;
+      padding: 10px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .social-icons a.fab:hover {
+      background-color: #ffb31c;
+    }
+
+    .social-links {
+      font-size: 16px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .social-links:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1.5em 1em;
+    }
+
+    footer a {
+      color: #ffb31c;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .btn {
+        font-size: 16px;
+        padding: 0.9em;
+      }
+
+      .contact-item, .social-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .social-links {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
+
   <!-- Header Section -->
   <header>
     <img src="Payneil Logo.JPG" alt="Payneil Logo" />
     <h1>Payneil - Easy & Secure Bills Payment</h1>
     <p>
-      Payneil! offers a fast and reliable way to pay your bills. We ensure each transaction is processed accurately, with strict confidentiality and full compliance with data privacy standards. All payments must be made in full before processing and are final once submitted—non-refundable, non-reversible, and non-transferable.<br><br>
-
+      Payneil offers a fast and reliable way to pay your bills. We ensure each transaction is processed accurately, with strict confidentiality and full compliance with data privacy standards.<br><br>
+      All payments must be made in full before processing and are final once submitted—non-refundable, non-reversible, and non-transferable.<br><br>
       Submitted information is retained for up to 1 year for audit purposes and securely deleted or anonymized afterward.<br><br>
-
-      Pay smart, pay safely—with Payneil!
+      <strong>Pay smart, pay safely—with Payneil!</strong>
     </p>
   </header>
 
   <!-- Main Section -->
   <main>
     <h2>Available Services</h2>
-
     <img src="Payneil Services.jpg" alt="Bayad Center Services" class="service-image" />
 
-    <a href="https://forms.gle/FpNnXT27X4dvFjRv9" class="btn" target="_blank">Bills Payment</a>
-    <a href="https://forms.gle/m6X19rGQjQiTjnKLA" class="btn" target="_blank">E-Load</a>
-    <a href="https://forms.gle/8gdEWCDEPo92aE82A" class="btn" target="_blank">Airline Booking</a>
-    <a href="https://forms.gle/iNXUrkZykYkkqzkY6" class="btn" target="_blank">Hotel Accommodation</a>
+    <a href="https://forms.gle/FpNnXT27X4dvFjRv9" class="btn" target="_blank"><i class="fas fa-receipt"></i> Bills Payment</a>
+    <a href="https://forms.gle/m6X19rGQjQiTjnKLA" class="btn" target="_blank"><i class="fas fa-mobile-alt"></i> E-Load</a>
+    <a href="https://forms.gle/8gdEWCDEPo92aE82A" class="btn" target="_blank"><i class="fas fa-plane"></i> Airline Booking</a>
+    <a href="https://forms.gle/iNXUrkZykYkkqzkY6" class="btn" target="_blank"><i class="fas fa-hotel"></i> Hotel Accommodation</a>
+
+    <!-- Contact Section -->
+    <div class="contact-info" id="contact">
+      <p>Need help? Contact us at:</p>
+
+      <div class="contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <a href="tel:+639777509537">0977 750 9537</a>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:support@payneil.com">support@payneil.com</a>
+      </div>
+
+      <!-- Social Media -->
+      <div class="social-icons">
+        <div class="social-item">
+          <a href="https://www.facebook.com/nlpatrck" target="_blank" class="fab fa-facebook-f" aria-label="Facebook"></a>
+          <a href="https://www.facebook.com/PayneilOfficial" target="_blank" class="social-links">Facebook.com/PayneilOfficial</a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.instagram.com/nlpatrck" target="_blank" class="fab fa-instagram" aria-label="Instagram"></a>
+          <a href="https://www.instagram.com/PayneilOfficial" target="_blank" class="social-links">Instagram.com/PayneilOfficial</a>
+        </div>
+      </div>
+    </div>
   </main>
-
-  <!-- Contact Section -->
-  <div class="contact-info">
-    <p><strong>Need help? Contact us at:</strong></p>
-
-    <div class="contact-item">
-      <i class="fas fa-phone-alt"></i>
-      <a href="tel:+639777509537">0977 750 9537</a>
-    </div>
-    <div class="contact-item">
-      <i class="fas fa-envelope"></i>
-      <a href="mailto:support@payneil.com">support@payneil.com</a>
-    </div>
-
-    <!-- Social Media -->
-    <div class="social-icons">
-      <div class="social-item">
-        <a href="https://www.facebook.com/nlpatrck" target="_blank" class="fab fa-facebook-f" aria-label="Facebook"></a>
-        <a href="https://www.facebook.com/PayneilOfficial" target="_blank" class="social-links">Facebook.com/PayneilOfficial</a>
-      </div>
-      <div class="social-item">
-        <a href="https://www.instagram.com/nlpatrck" target="_blank" class="fab fa-instagram" aria-label="Instagram"></a>
-        <a href="https://www.instagram.com/PayneilOfficial" target="_blank" class="social-links">Instagram.com/PayneilOfficial</a>
-      </div>
-    </div>
-  </div>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Payneil. All Rights Reserved.</p>
     <p>
       By submitting, you agree to our
-      <a href="privacy-policy.html" target="_blank" style="color: #ffb31c;">Privacy Policy</a>.
+      <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
     </p>
-  </footer>
-
-  <!-- Font Awesome JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-</body>
-</html>
