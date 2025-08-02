@@ -101,13 +101,12 @@
       background-color: #fff;
       color: #333;
       padding: 1em;
-      margin: 1em auto;
+      margin: 1em;
       border-radius: 5px;
       text-align: center;
       text-decoration: none;
       font-size: 18px;
       font-weight: 600;
-      max-width: 400px;
       transition: all 0.3s ease;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       border: 2px solid #ffb31c;
@@ -152,6 +151,15 @@
       border-radius: 10px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.15);
       border: 3px solid #ffb31c;
+    }
+
+    /* Service Grid */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Creates a 2x2 grid */
+      gap: 20px;
+      justify-items: center;
+      margin-top: 30px;
     }
 
     /* Contact Info */
@@ -268,6 +276,10 @@
         display: block;
         margin: 0.5em 0;
       }
+
+      .service-grid {
+        grid-template-columns: 1fr; /* Stacks the grid items vertically on mobile */
+      }
     }
   </style>
 </head>
@@ -305,10 +317,13 @@
     <h2>Available Services</h2>
     <img src="Payneil Services.jpg" alt="Bayad Center Services" class="service-image" />
 
-    <a href="https://forms.gle/FpNnXT27X4dvFjRv9" class="btn" target="_blank"><i class="fas fa-receipt"></i> Bills Payment</a>
-    <a href="https://forms.gle/m6X19rGQjQiTjnKLA" class="btn" target="_blank"><i class="fas fa-mobile-alt"></i> E-Load</a>
-    <a href="https://forms.gle/8gdEWCDEPo92aE82A" class="btn" target="_blank"><i class="fas fa-plane"></i> Airline Booking</a>
-    <a href="https://forms.gle/iNXUrkZykYkkqzkY6" class="btn" target="_blank"><i class="fas fa-hotel"></i> Hotel Accommodation</a>
+    <!-- Service Buttons in 2x2 Grid -->
+    <div class="service-grid">
+      <a href="https://forms.gle/FpNnXT27X4dvFjRv9" class="btn" target="_blank"><i class="fas fa-receipt"></i> Bills Payment</a>
+      <a href="https://forms.gle/m6X19rGQjQiTjnKLA" class="btn" target="_blank"><i class="fas fa-mobile-alt"></i> E-Load</a>
+      <a href="https://forms.gle/8gdEWCDEPo92aE82A" class="btn" target="_blank"><i class="fas fa-plane"></i> Airline Booking</a>
+      <a href="https://forms.gle/iNXUrkZykYkkqzkY6" class="btn" target="_blank"><i class="fas fa-hotel"></i> Hotel Accommodation</a>
+    </div>
 
     <!-- Contact Section -->
     <div class="contact-info" id="contact">
