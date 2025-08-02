@@ -247,6 +247,27 @@
         display: block;
         margin: 0.5em 0;
       }
+    /* Animation Style */
+    @keyframes slideInBanner {
+      0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .promo-banner {
+      background-color: #ffb31c;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      font-size: 1.1em;
+      font-weight: bold;
+      animation: slideInBanner 1s ease-out forwards;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
@@ -260,9 +281,9 @@
     <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
   </nav>
 
-  <!-- PROMO BANNER STYLE -->
-  <div style="background-color: #ffb31c; color: white; text-align: center; padding: 1em 1.5em; font-weight: bold; font-size: 1.1em;">
-    <i class="fas fa-bullhorn"></i> No More Extra Charges! <span style="text-decoration: underline;">ZERO transaction fees</span> on all bill payments — fast, secure, and transparent with Payneil!
+  <!-- Animated Slide-In Banner -->
+  <div class="promo-banner">
+    <i class="fas fa-bullhorn"></i> Promo Alert: <strong>ZERO transaction fees</strong> on all bills payments! No hidden charges. Just secure and easy payments with Payneil.
   </div>
 
   <!-- Header Section -->
