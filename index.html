@@ -7,29 +7,29 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
 
   <style>
-    :root {
-      --primary: #ffb31c;
-      --dark: #222;
-      --light: #f9f9f9;
-      --font: 'Segoe UI', 'Roboto', sans-serif;
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: var(--font);
-      background-color: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: #333;
     }
 
+    /* Navigation Bar */
     nav {
-      background-color: var(--dark);
-      padding: 1em;
+      background-color: #333;
+      padding: 0.8em 1em;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -37,7 +37,7 @@
     }
 
     nav .logo {
-      color: var(--primary);
+      color: #ffb31c;
       font-weight: bold;
       font-size: 1.4em;
       text-decoration: none;
@@ -51,14 +51,16 @@
     }
 
     nav a:hover {
-      color: var(--primary);
+      color: #ffb31c;
     }
 
+    /* Header Section */
     header {
-      background: var(--primary);
+      background-color: #ffb31c;
       color: white;
       text-align: center;
       padding: 4em 1em 3em;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
@@ -68,15 +70,32 @@
 
     header p {
       font-size: 1.1em;
-      margin-bottom: 1.5em;
-      max-width: 600px;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1em;
+      line-height: 1.6;
+    }
+
+    .promo-message {
+      background-color: #fff3cd;
+      color: #856404;
+      padding: 1em;
+      margin-top: 1em;
+      border-radius: 8px;
+      border: 1px solid #ffeeba;
+      max-width: 800px;
       margin-left: auto;
       margin-right: auto;
     }
 
+    .promo-message i {
+      margin-right: 10px;
+    }
+
+    /* Button */
     .hero-cta {
       background: white;
-      color: var(--primary);
+      color: #ffb31c;
       padding: 0.8em 1.5em;
       border: none;
       border-radius: 6px;
@@ -91,17 +110,51 @@
       color: white;
     }
 
-    main {
-      padding: 3em 1em;
-      max-width: 1200px;
-      margin: 0 auto;
+    .btn {
+      display: block;
+      background-color: #fff;
+      color: #333;
+      padding: 1em;
+      margin: 1em auto;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      max-width: 400px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: 2px solid #ffb31c;
     }
 
-    .section-title {
-      text-align: center;
+    .btn i {
+      color: #ffb31c;
+      margin-right: 10px;
+    }
+
+    .btn:hover {
+      background-color: #ffb31c;
+      color: white;
+    }
+
+    .btn:hover i {
+      color: white;
+    }
+
+    /* Main Section */
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2em 1em 4em;
+    }
+
+    h2 {
       font-size: 2em;
-      margin-bottom: 1em;
-      color: var(--dark);
+      text-align: center;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ffb31c;
+      padding-bottom: 10px;
     }
 
     .grid {
@@ -125,7 +178,7 @@
 
     .card i {
       font-size: 2em;
-      color: var(--primary);
+      color: #ffb31c;
       margin-bottom: 0.5em;
     }
 
@@ -138,58 +191,91 @@
       display: inline-block;
       margin-top: 1em;
       text-decoration: none;
-      color: var(--primary);
+      color: #ffb31c;
       font-weight: bold;
     }
 
-    .promo-message {
-      background-color: #fff3cd;
-      color: #856404;
-      padding: 1em;
-      margin-top: 1em;
-      border-radius: 8px;
-      border: 1px solid #ffeeba;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .promo-message i {
-      margin-right: 10px;
-    }
-
-    .contact-section {
-      margin-top: 3em;
+    /* Contact Section */
+    .contact-info {
       text-align: center;
+      margin-top: 40px;
     }
 
-    .contact-section p {
-      margin: 0.5em 0;
+    .contact-info p {
+      font-weight: bold;
       font-size: 1.1em;
     }
 
-    .social-icons a {
-      margin: 0 10px;
-      color: var(--primary);
-      font-size: 1.4em;
+    .contact-item i {
+      font-size: 20px;
+      color: #ffb31c;
     }
 
-    footer {
-      background: var(--dark);
-      color: white;
-      text-align: center;
-      padding: 2em 1em;
-      margin-top: 3em;
-    }
-
-    footer a {
-      color: var(--primary);
+    .contact-item a {
+      color: #ffb31c;
       text-decoration: none;
     }
 
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* Social Media */
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+      margin: 10px 0;
+    }
+
+    .social-links {
+      font-size: 18px;
+      color: #ffb31c;
+      font-weight: 600;
+    }
+
+    .social-icons a.fab {
+      font-size: 20px;
+      color: #ffb31c;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(90deg, #333, #222);
+      color: white;
+      text-align: center;
+      padding: 1.5em 1em;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    footer a {
+      color: #ffb31c;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile Styles */
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2em;
+        font-size: 1.8em;
+      }
+
+      .btn {
+        font-size: 16px;
+        padding: 0.9em;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.5em 0;
       }
     }
   </style>
@@ -198,7 +284,7 @@
 
   <!-- Navigation Bar -->
   <nav>
-    <a href="#" class="logo">Payneil</a>
+    <a href="#top" class="logo">Payneil</a>
     <div>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
@@ -207,7 +293,7 @@
   </nav>
 
   <!-- Header Section -->
-  <header>
+  <header id="top">
     <h1>Payneil - Easy & Secure Bills Payment</h1>
     <p>
       Payneil offers a fast and reliable way to pay your bills. We ensure each transaction is processed accurately, with strict confidentiality and full compliance with data privacy standards.<br><br>
@@ -227,44 +313,58 @@
   </header>
 
   <!-- Main Section -->
-  <main>
-    <h2 class="section-title" id="services">Our Services</h2>
+  <main id="services">
+    <h2>Available Services</h2>
+
     <div class="grid">
       <div class="card">
-        <i class="fas fa-receipt"></i>
-        <h3>Bills Payment</h3>
-        <p>Pay utilities, internet, and more—fast and secure.</p>
-        <a href="https://forms.gle/FpNnXT27X4dvFjRv9" target="_blank">Start Payment</a>
+        <i class="fas fa-water"></i>
+        <h3>Water Bill Payment</h3>
+        <p>Pay your water bills easily and on time, no more long queues!</p>
+        <a href="#">Pay Now</a>
+      </div>
+      <div class="card">
+        <i class="fas fa-bolt"></i>
+        <h3>Electricity Bill Payment</h3>
+        <p>Stay on top of your energy costs with quick and secure payments.</p>
+        <a href="#">Pay Now</a>
       </div>
       <div class="card">
         <i class="fas fa-mobile-alt"></i>
-        <h3>E-Load</h3>
-        <p>Instant load for all major networks, anytime.</p>
-        <a href="https://forms.gle/m6X19rGQjQiTjnKLA" target="_blank">Get Load</a>
-      </div>
-      <div class="card">
-        <i class="fas fa-plane"></i>
-        <h3>Airline Booking</h3>
-        <p>Book local and international flights with ease.</p>
-        <a href="https://forms.gle/8gdEWCDEPo92aE82A" target="_blank">Book Now</a>
-      </div>
-      <div class="card">
-        <i class="fas fa-hotel"></i>
-        <h3>Hotel Accommodation</h3>
-        <p>Find and book comfortable stays at great rates.</p>
-        <a href="https://forms.gle/iNXUrkZykYkkqzkY6" target="_blank">Reserve</a>
+        <h3>Mobile Bill Payment</h3>
+        <p>Never miss a payment for your mobile services again.</p>
+        <a href="#">Pay Now</a>
       </div>
     </div>
 
     <!-- Contact Section -->
-    <div class="contact-section" id="contact">
-      <h2 class="section-title">Get in Touch</h2>
-      <p><i class="fas fa-phone-alt"></i> <a href="tel:+639777509537">0977 750 9537</a></p>
-      <p><i class="fas fa-envelope"></i> <a href="mailto:support@payneil.com">support@payneil.com</a></p>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/PayneilOfficial" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/PayneilOfficial" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <div class="contact-info" id="contact">
+      <h3>Contact Us</h3>
+      <p>We’re here to assist you with any questions or concerns!</p>
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <p>+123-456-7890</p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:support@payneil.com">support@payneil.com</a>
+      </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-icons">
+      <div class="social-item">
+        <a href="https://facebook.com" class="fab fa-facebook-f"></a>
+        <a href="https://twitter.com" class="fab fa-twitter"></a>
+        <a href="https://linkedin.com" class="fab fa-linkedin-in"></a>
       </div>
     </div>
   </main>
 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Payneil. All Rights Reserved.</p>
+    <p><a href="#top">Back to top</a></p>
+  </footer>
+</body>
+</html>
