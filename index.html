@@ -13,6 +13,10 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Segoe UI', 'Roboto', sans-serif;
       background-color: #f5f5f5;
@@ -24,11 +28,32 @@
       color: #333;
     }
 
+    /* Navigation Bar */
+    nav {
+      background-color: #333;
+      padding: 0.8em 1em;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffb31c;
+    }
+
     header {
       background-color: #ffb31c;
       color: white;
       text-align: center;
       padding: 2em 1em;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     header img {
@@ -67,12 +92,14 @@
       font-size: 2em;
       text-align: center;
       margin-bottom: 20px;
+      border-bottom: 2px solid #ffb31c;
+      padding-bottom: 10px;
     }
 
     .btn {
       display: block;
-      background-color: #ffb31c;
-      color: white;
+      background-color: #fff;
+      color: #333;
       padding: 1em;
       margin: 1em auto;
       border-radius: 5px;
@@ -81,13 +108,23 @@
       font-size: 18px;
       font-weight: 600;
       max-width: 400px;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      transition: all 0.3s ease;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: 2px solid #ffb31c;
+    }
+
+    .btn i {
+      color: #ffb31c;
+      margin-right: 10px;
     }
 
     .btn:hover {
-      background-color: #f8a400;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      background-color: #ffb31c;
+      color: white;
+    }
+
+    .btn:hover i {
+      color: white;
     }
 
     .service-image {
@@ -98,6 +135,7 @@
       display: block;
       border-radius: 10px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      border: 3px solid #ffb31c;
     }
 
     .contact-info {
@@ -110,28 +148,30 @@
       font-size: 1.1em;
     }
 
-    /* Unified font size and color for contact and social links */
     .contact-item, 
     .social-item .social-links {
-      font-size: 18px;       /* Same font size */
-      color: #ffb31c;        /* Same color as icons */
+      font-size: 18px;
+      color: #ffb31c;
       font-weight: 600;
     }
 
-    /* Unified icon size and color */
     .contact-item i,
     .social-icons a.fab {
-      font-size: 20px;       /* Same icon size */
-      color: #ffb31c;        /* Same icon color */
-      background-color: transparent !important; /* Remove background from social icons */
-      padding: 0;            /* Remove padding from social icons */
-      border-radius: 0;      /* Remove round shape */
+      font-size: 20px;
+      color: #ffb31c;
+      background-color: transparent !important;
+      padding: 0;
+      border-radius: 0;
       width: auto;
       height: auto;
       display: inline-block;
     }
 
-    /* Align social icon and text */
+    .contact-item i:hover,
+    .social-icons a.fab:hover {
+      text-shadow: 0 0 5px #ffb31c;
+    }
+
     .social-item {
       display: flex;
       align-items: center;
@@ -140,13 +180,11 @@
       margin: 10px 0;
     }
 
-    /* Remove previous background hover effect on social icons */
     .social-icons a.fab:hover {
       background-color: transparent;
       color: #e69900;
     }
 
-    /* Social text link hover */
     .social-links:hover {
       color: #e69900;
       text-decoration: underline;
@@ -171,10 +209,11 @@
     }
 
     footer {
-      background-color: #333;
+      background: linear-gradient(90deg, #333, #222);
       color: white;
       text-align: center;
       padding: 1.5em 1em;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     }
 
     footer a {
@@ -205,13 +244,26 @@
       .social-links {
         font-size: 14px;
       }
+
+      nav a {
+        display: block;
+        margin: 0.5em 0;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#top">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+  </nav>
+
   <!-- Header Section -->
-  <header>
+  <header id="top">
     <img src="Payneil Logo.JPG" alt="Payneil Logo" />
     <h1>Payneil - Easy & Secure Bills Payment</h1>
     <p>
@@ -223,7 +275,7 @@
   </header>
 
   <!-- Main Section -->
-  <main>
+  <main id="services">
     <h2>Available Services</h2>
     <img src="Payneil Services.jpg" alt="Bayad Center Services" class="service-image" />
 
